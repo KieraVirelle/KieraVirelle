@@ -402,6 +402,8 @@ main {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .showcase-card:hover {
@@ -480,6 +482,11 @@ main {
   width: 8px;
   height: 2px;
   background: var(--rose);
+}
+
+.showcase-card .button {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .panel--glass {
