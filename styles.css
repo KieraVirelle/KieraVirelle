@@ -345,7 +345,7 @@ a {
 }
 
 main {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -389,10 +389,11 @@ main {
 .showcase__grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
   margin-top: 1.2rem;
   z-index: 1;
+  align-items: stretch;
 }
 
 .showcase-card {
@@ -408,6 +409,7 @@ main {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   display: flex;
   flex-direction: column;
+  min-height: 360px;
 }
 
 .showcase-card:hover {
@@ -467,10 +469,10 @@ main {
 }
 
 .showcase-card__meta {
-  margin: 0.6rem 0 0.85rem;
+  margin: 0.75rem 0 1rem;
   padding-left: 0;
   color: #d6c9bc;
-  line-height: 1.4;
+  line-height: 1.55;
   list-style: none;
 }
 
@@ -493,6 +495,58 @@ main {
 .showcase-card .button {
   align-self: flex-start;
   margin-top: auto;
+}
+
+/* Showcase fallbacks to force cards even if classes change */
+#showcase .showcase__grid > article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: radial-gradient(circle at 25% 25%, rgba(211, 25, 58, 0.12), transparent 48%),
+              radial-gradient(circle at 78% 68%, rgba(255, 255, 255, 0.08), transparent 55%),
+              linear-gradient(160deg, rgba(0, 0, 0, 0.52), rgba(211, 25, 58, 0.06));
+  padding: 1.4rem 1.35rem 1.6rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#showcase .showcase__grid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#showcase .showcase__grid li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin: 0.35rem 0;
+}
+
+#showcase .showcase__grid li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 2px;
+  background: var(--rose);
+}
+
+@media (min-width: 1024px) {
+  .showcase__grid {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .showcase__grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .showcase__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .panel--glass {
