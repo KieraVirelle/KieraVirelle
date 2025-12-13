@@ -364,6 +364,8 @@ main {
 .showcase {
   position: relative;
   overflow: hidden;
+  border-radius: clamp(20px, 3vw, 28px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .showcase::after {
@@ -387,9 +389,9 @@ main {
 .showcase__grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.2rem;
   z-index: 1;
 }
 
@@ -397,9 +399,11 @@ main {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 1rem 1.1rem 1.2rem;
-  background: linear-gradient(155deg, rgba(0, 0, 0, 0.45), rgba(211, 25, 58, 0.08));
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  padding: 1.4rem 1.35rem 1.6rem;
+  background: radial-gradient(circle at 25% 25%, rgba(211, 25, 58, 0.12), transparent 48%),
+              radial-gradient(circle at 78% 68%, rgba(255, 255, 255, 0.08), transparent 55%),
+              linear-gradient(160deg, rgba(0, 0, 0, 0.52), rgba(211, 25, 58, 0.06));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   display: flex;
@@ -454,7 +458,7 @@ main {
 .showcase-card h3 {
   margin: 0 0 0.35rem;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   letter-spacing: 0.01em;
 }
 
@@ -464,20 +468,22 @@ main {
 
 .showcase-card__meta {
   margin: 0.6rem 0 0.85rem;
-  padding-left: 1rem;
+  padding-left: 0;
   color: #d6c9bc;
   line-height: 1.4;
+  list-style: none;
 }
 
 .showcase-card__meta li {
-  margin: 0.2rem 0;
+  margin: 0.35rem 0;
   position: relative;
+  padding-left: 1.15rem;
 }
 
 .showcase-card__meta li::before {
   content: '';
   position: absolute;
-  left: -0.8rem;
+  left: 0;
   top: 0.7em;
   width: 8px;
   height: 2px;
