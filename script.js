@@ -10,6 +10,23 @@ const lightboxTitle = document.querySelector("#lightbox-title");
 const lightboxMedia = document.querySelector("#lightbox-media");
 const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
 const portfolioImages = document.querySelectorAll(".project-thumb img");
+const tabLoader = document.querySelector("#tab-loader");
+const flyerFilterButtons = document.querySelectorAll("[data-flyer-filter]");
+const flyerCards = document.querySelectorAll("[data-flyer-tags]");
+const flyerEmptyMessage = document.querySelector(".flyer-empty-message");
+const cuteQuote = document.querySelector("[data-cute-quote]");
+const bookingLinks = document.querySelectorAll(".booking-cta, .hero-actions a[href*='discord.com']");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let loadingTimer;
+let sparkleTimer = 0;
+
+const cuteQuotes = [
+  "Built between snack breaks",
+  "Powered by cookies",
+  "Dino nuggies secured",
+  "Caffeine.exe is running",
+  "Making cute things at alarming speed",
+];
 
 function setActiveTab(tabId, updateHash = true) {
   panels.forEach((panel) => {
@@ -28,6 +45,21 @@ function setActiveTab(tabId, updateHash = true) {
   }
 }
 
+function showTabLoader() {
+  if (!tabLoader) {
+    return;
+  }
+
+  clearTimeout(loadingTimer);
+  tabLoader.classList.add("active");
+  tabLoader.setAttribute("aria-hidden", "false");
+
+  loadingTimer = setTimeout(() => {
+    tabLoader.classList.remove("active");
+    tabLoader.setAttribute("aria-hidden", "true");
+  }, 430);
+}
+
 menuToggle?.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -36,7 +68,14 @@ menuToggle?.addEventListener("click", () => {
 tabTargets.forEach((target) => {
   target.addEventListener("click", (event) => {
     event.preventDefault();
-    setActiveTab(target.dataset.tabTarget);
+    const nextTab = target.dataset.tabTarget;
+
+    if (!nextTab || document.querySelector(`[data-tab-panel="${nextTab}"]`)?.classList.contains("active")) {
+      return;
+    }
+
+    showTabLoader();
+    setTimeout(() => setActiveTab(nextTab), 150);
   });
 });
 
@@ -45,10 +84,85 @@ if (initialTab && document.querySelector(`[data-tab-panel="${initialTab}"]`)) {
   setActiveTab(initialTab, false);
 }
 
+if (cuteQuote) {
+  let quoteIndex = 0;
+
+  setInterval(() => {
+    quoteIndex = (quoteIndex + 1) % cuteQuotes.length;
+    cuteQuote.textContent = cuteQuotes[quoteIndex];
+  }, 3200);
+}
+
 portfolioImages.forEach((image) => {
   image.addEventListener("error", () => {
     image.classList.add("missing");
     image.closest("[data-media-src]")?.removeAttribute("data-media-src");
+  });
+});
+
+flyerFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.flyerFilter;
+    let visibleCount = 0;
+
+    flyerFilterButtons.forEach((filterButton) => {
+      filterButton.classList.toggle("active", filterButton === button);
+    });
+
+    flyerCards.forEach((card) => {
+      const tags = card.dataset.flyerTags.split(" ");
+      const isVisible = filter === "all" || tags.includes(filter);
+
+      card.hidden = !isVisible;
+      if (isVisible) {
+        visibleCount += 1;
+      }
+    });
+
+    if (flyerEmptyMessage) {
+      flyerEmptyMessage.hidden = visibleCount > 0;
+    }
+  });
+});
+
+function createBurst(x, y, className, count = 1) {
+  if (reduceMotion.matches) {
+    return;
+  }
+
+  for (let index = 0; index < count; index += 1) {
+    const particle = document.createElement("span");
+    const hueClass = count === 1
+      ? ["pink", "yellow", "blue"][Math.floor(Math.random() * 3)]
+      : ["pink", "yellow", "blue"][index % 3];
+
+    particle.className = `${className} ${className}-${hueClass}`;
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.setProperty("--dx", `${Math.random() * 70 - 35}px`);
+    particle.style.setProperty("--dy", `${Math.random() * -58 - 18}px`);
+    particle.style.setProperty("--turn", `${Math.random() * 180 - 90}deg`);
+    document.body.append(particle);
+
+    setTimeout(() => particle.remove(), 760);
+  }
+}
+
+document.addEventListener("pointermove", (event) => {
+  const now = Date.now();
+
+  if (now - sparkleTimer < 95 || reduceMotion.matches || event.pointerType === "touch") {
+    return;
+  }
+
+  sparkleTimer = now;
+  createBurst(event.clientX, event.clientY, "cursor-sparkle");
+});
+
+bookingLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const rect = link.getBoundingClientRect();
+    createBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, "booking-confetti", 14);
   });
 });
 

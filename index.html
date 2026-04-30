@@ -9,6 +9,11 @@
 </head>
 <body>
   <div class="page-frame">
+    <a class="booking-cta" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer" aria-label="Book a commission on Discord with kieravirelle">
+      <span>Message Me on Discord</span>
+      <small>Book a Commission</small>
+    </a>
+
     <header class="site-header">
       <a class="brand" href="#about" aria-label="Kiera Virelle home" data-tab-target="about">
         <span class="brand-mark">KV</span>
@@ -20,6 +25,7 @@
         <span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <span class="nav-status">Commissions Open &bull; Gil + USD &bull; Discord Booking</span>
         <button class="active" type="button" data-tab-target="about">About me</button>
         <button type="button" data-tab-target="portfolio">Websites/Carrds</button>
         <button type="button" data-tab-target="flyers">Flyers</button>
@@ -41,6 +47,36 @@
             <span>Plugins</span>
             <span>Bots</span>
           </div>
+          <div class="hero-status-grid" aria-label="Commission status">
+            <article>
+              <span>Open</span>
+              <strong>Commissions</strong>
+            </article>
+            <article>
+              <span>Rush</span>
+              <strong>24-48h Flyers</strong>
+            </article>
+            <article>
+              <span>Pay</span>
+              <strong>Gil + USD</strong>
+            </article>
+          </div>
+          <div class="cute-desk-panel" aria-label="Cute commission desk status">
+            <article class="slot-ticket">
+              <span>Commission Slots</span>
+              <strong>2-3 Open</strong>
+            </article>
+            <article class="snack-widget">
+              <span>Current fuel</span>
+              <strong>Dino nuggies</strong>
+              <strong>Cookies</strong>
+              <strong>Too much caffeine</strong>
+            </article>
+            <article class="quote-widget">
+              <span>Desk note</span>
+              <strong data-cute-quote>Built between snack breaks</strong>
+            </article>
+          </div>
           <div class="hero-bio">
             <p>
               Hai Hai, I'm Kiera Virelle, owner of Neon Neko and professional pink-pixel menace. I love designing websites and Carrds for people in the community, plus flyers, plugins, and Discord bots when the caffeine starts making decisions.
@@ -53,6 +89,7 @@
           <div class="hero-actions">
             <button class="button primary" type="button" data-tab-target="portfolio">View work</button>
             <button class="button secondary" type="button" data-tab-target="pricing">See pricing</button>
+            <a class="button secondary" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer">Message me</a>
           </div>
         </div>
         <figure class="hero-media">
@@ -211,42 +248,51 @@
         <div class="panel-heading">
           <h2>Cute promo flyers for events, venues, and big-night chaos.</h2>
         </div>
+        <div class="flyer-filter-bar" aria-label="Flyer gallery filters">
+          <button class="active" type="button" data-flyer-filter="all">All</button>
+          <button type="button" data-flyer-filter="static">Static</button>
+          <button type="button" data-flyer-filter="animated">Animated</button>
+          <button type="button" data-flyer-filter="venue">Venue</button>
+          <button type="button" data-flyer-filter="hiring">Hiring</button>
+          <button type="button" data-flyer-filter="seasonal">Seasonal</button>
+          <button type="button" data-flyer-filter="music">Music promo</button>
+        </div>
         <div class="gallery-grid">
-          <article class="preview-card video-card">
+          <article class="preview-card video-card" data-flyer-tags="animated venue music">
             <video src="Video/Neon (2).mp4" controls muted playsinline></video>
             <h3>Video Flyers</h3>
             <p>Short-form animated video flyers for social posts, music-backed promos, and venue ads.</p>
             <button class="lightbox-button" type="button" data-media-src="Video/Neon (2).mp4" data-media-type="video" data-media-title="Video Flyers">Open full video</button>
           </article>
-          <article class="preview-card image-card">
+          <article class="preview-card image-card" data-flyer-tags="animated venue">
             <button class="media-open" type="button" data-media-src="images/Angels.gif" data-media-type="image" data-media-title="Animated Flyers">
               <img class="portrait-preview" src="images/Angels.gif" alt="Angels versus Demons animated flyer preview">
             </button>
             <h3>Animated Flyers</h3>
-            <p>Motion flyers for parties, games, giveaways, and venue nights. Starts at 6M gil.</p>
+            <p>Motion flyers for parties, games, giveaways, and venue nights. Starts at 4M gil.</p>
           </article>
-          <article class="preview-card image-card">
+          <article class="preview-card image-card" data-flyer-tags="animated venue music">
             <button class="media-open" type="button" data-media-src="images/PastelRave.gif" data-media-type="image" data-media-title="Pastel Rave Flyer">
               <img class="portrait-preview" src="images/PastelRave.gif" alt="Pastel Rave animated flyer preview">
             </button>
             <h3>Pastel Rave Flyer</h3>
             <p>Bright pastel rave promo with animated club energy, cute color, and high-impact event styling.</p>
           </article>
-          <article class="preview-card image-card">
+          <article class="preview-card image-card" data-flyer-tags="animated music">
             <button class="media-open" type="button" data-media-src="images/Hatching.gif" data-media-type="image" data-media-title="Music Promos">
               <img class="portrait-preview" src="images/Hatching.gif" alt="Hatching Hearts animated flyer preview">
             </button>
             <h3>Music Promos</h3>
-            <p>Animated or music-ready visuals for social posting and event hype. Starts at 6M gil.</p>
+            <p>Animated or music-ready visuals for social posting and event hype. Starts at 4M gil.</p>
           </article>
-          <article class="preview-card image-card">
+          <article class="preview-card image-card" data-flyer-tags="animated hiring venue">
             <button class="media-open" type="button" data-media-src="images/Is Hiring (2).gif" data-media-type="image" data-media-title="Hiring Posts">
               <img class="portrait-preview" src="images/Is Hiring (2).gif" alt="Animated hiring flyer preview">
             </button>
             <h3>Hiring Posts</h3>
             <p>Role callouts, staff recruitment, venue hiring, and attention-grabbing announcement posts.</p>
           </article>
-          <article class="preview-card image-card">
+          <article class="preview-card image-card" data-flyer-tags="animated seasonal venue">
             <button class="media-open" type="button" data-media-src="images/NNStPattyTake2.gif" data-media-type="image" data-media-title="Seasonal Flyers">
               <img class="portrait-preview" src="images/NNStPattyTake2.gif" alt="St. Patrick themed animated flyer preview">
             </button>
@@ -254,6 +300,7 @@
             <p>Holiday, theme-night, and special event designs with custom branding and visuals.</p>
           </article>
         </div>
+        <p class="flyer-empty-message" hidden>No flyer previews in this category yet.</p>
         <div class="flyer-pricing-wrap" aria-label="Flyer pricing">
           <div class="pricing-ribbon">
             <span>Flyer Pricing</span>
@@ -262,28 +309,28 @@
           <div class="flyer-pricing">
             <article class="price-card single-price">
               <h3>Single Flyers</h3>
-              <strong>3M / 6M Gil</strong>
-              <p>Static Flyer - 3M gil / $8. Animated Flyer - 6M gil / $15. Animated flyers can include motion, effects, and music.</p>
+              <strong>2M / 4M Gil</strong>
+              <p>Static Flyer - 2M gil / $6. Animated Flyer - 4M gil / $12. Animated flyers can include motion, effects, and music.</p>
             </article>
             <article class="price-card monthly-price">
               <h3>Essential Coverage</h3>
-              <strong>11M Gil / $30</strong>
+              <strong>8M Gil / $22</strong>
               <p>4 static flyers, one per week. Ideal for consistent weekly event coverage.</p>
             </article>
             <article class="price-card monthly-price">
               <h3>Premium Coverage</h3>
-              <strong>16M Gil / $45</strong>
+              <strong>11M Gil / $28</strong>
               <p>2 animated flyers and 2 static flyers for a balanced monthly promo schedule.</p>
             </article>
             <article class="price-card monthly-price">
               <h3>Full Motion Coverage</h3>
-              <strong>20M Gil / $60</strong>
+              <strong>15M Gil / $40</strong>
               <p>4 animated flyers. Best for major events, collabs, or high-impact nights.</p>
             </article>
             <article class="price-card extra-price">
               <h3>Additional Options</h3>
               <strong>+2M Rush</strong>
-              <p>Extra Static Flyer - 3M gil / $8. Extra Animated Flyer - 6M gil / $15. Rush Order, 24-48h, is +2M gil / +$5.</p>
+              <p>Extra Static Flyer - 2M gil / $6. Extra Animated Flyer - 4M gil / $12. Rush Order, 24-48h, is +2M gil / +$5.</p>
             </article>
             <article class="price-card bundle-card extra-price">
               <h3>Notes</h3>
@@ -381,40 +428,40 @@
                   <h4>Static Flyer</h4>
                   <p>Single static flyer for events, promos, hiring posts, menus, or announcements.</p>
                 </div>
-                <strong>3M Gil / $8</strong>
+                <strong>2M Gil / $6</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Animated Flyer</h4>
                   <p>Animated flyers may include motion, effects, and music.</p>
                 </div>
-                <strong>6M Gil / $15</strong>
+                <strong>4M Gil / $12</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Essential Coverage</h4>
                   <p>4 static flyers, ideal for weekly event coverage.</p>
                 </div>
-                <strong>11M Gil / $30</strong>
+                <strong>8M Gil / $22</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Premium Coverage</h4>
                   <p>2 animated flyers and 2 static flyers.</p>
                 </div>
-                <strong>16M Gil / $45</strong>
+                <strong>11M Gil / $28</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Full Motion Coverage</h4>
                   <p>4 animated flyers for high-impact event promotion.</p>
                 </div>
-                <strong>20M Gil / $60</strong>
+                <strong>15M Gil / $40</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Add-Ons</h4>
-                  <p>Extra Static: 3M / $8. Extra Animated: 6M / $15. Rush Order, 24-48h: +2M / +$5.</p>
+                  <p>Extra Static: 2M / $6. Extra Animated: 4M / $12. Rush Order, 24-48h: +2M / +$5.</p>
                 </div>
                 <strong>Add-ons</strong>
               </div>
@@ -601,6 +648,55 @@
         </div>
       </section>
     </main>
+  </div>
+
+  <div class="sticker-field" aria-hidden="true">
+    <span class="desk-clutter washi washi-pink"></span>
+    <span class="desk-clutter washi washi-blue"></span>
+    <span class="desk-clutter paperclip paperclip-yellow"></span>
+    <span class="desk-clutter desk-heart"></span>
+    <span class="desk-clutter desk-star"></span>
+    <span class="tama-mascot">
+      <span class="tama-screen">
+        <i class="tama-ear tama-ear-left"></i>
+        <i class="tama-ear tama-ear-right"></i>
+        <i class="tama-face"></i>
+      </span>
+      <span>Kiera status: designing</span>
+    </span>
+    <span class="sticker sticker-spark">Spark</span>
+    <span class="sticker sticker-pop">Pop</span>
+    <span class="sticker sticker-pixel">Pixel</span>
+    <span class="post-it post-it-pink post-it-nuggies">Powered by dino nuggies</span>
+    <span class="post-it post-it-yellow post-it-cookies">Cookies first, code second</span>
+    <span class="post-it post-it-blue post-it-bunny">
+      <span class="bunny-doodle">
+        <i class="bunny-ear left-ear"></i>
+        <i class="bunny-ear right-ear"></i>
+        <i class="bunny-head"></i>
+        <i class="bunny-body"></i>
+        <i class="bunny-arm"></i>
+        <i class="cookie-bite"></i>
+      </span>
+      <span>Snack break approved</span>
+    </span>
+    <span class="post-it post-it-coffee">
+      <span class="coffee-doodle">
+        <i class="steam steam-one"></i>
+        <i class="steam steam-two"></i>
+        <i class="coffee-cup"></i>
+        <i class="coffee-handle"></i>
+        <i class="coffee-saucer"></i>
+      </span>
+      <span>Caffeine made this</span>
+    </span>
+  </div>
+
+  <div class="loading-screen" id="tab-loader" aria-hidden="true">
+    <div class="loading-card">
+      <span>Now loading...</span>
+      <div class="loading-track"><i></i></div>
+    </div>
   </div>
 
   <div class="lightbox" id="media-lightbox" aria-hidden="true">
