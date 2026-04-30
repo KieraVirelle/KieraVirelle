@@ -2033,7 +2033,7 @@ p {
     0.45rem 0.45rem 0 #9ee8ff,
     0 0 0 0.45rem rgba(255, 94, 183, 0.28);
   object-fit: cover;
-  object-position: center;
+  object-position: 54% 24%;
   aspect-ratio: 9 / 14;
 }
 
