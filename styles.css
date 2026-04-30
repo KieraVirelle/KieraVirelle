@@ -677,6 +677,105 @@ p {
   margin: 0.35rem 0 0;
 }
 
+.contact-card,
+.expectations-card {
+  border: 3px solid var(--deep-line);
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(90deg, rgba(255, 94, 183, 0.09) 1px, transparent 1px),
+    linear-gradient(rgba(255, 94, 183, 0.09) 1px, transparent 1px),
+    linear-gradient(135deg, #fffaff 0%, #ffe1f3 58%, #fff8df 100%);
+  background-size: 1rem 1rem, 1rem 1rem, auto;
+  box-shadow: 0.42rem 0.42rem 0 #f7add5;
+  padding: clamp(1rem, 2vw, 1.25rem);
+}
+
+.contact-card h2,
+.expectations-card h2 {
+  max-width: none;
+  margin-bottom: 0.75rem;
+  color: var(--deep-line);
+  font-size: clamp(1.9rem, 4vw, 3.1rem);
+  text-shadow: 0.06em 0.06em 0 #ffd164;
+}
+
+.social-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.social-grid article,
+.social-grid a,
+.expectation-block {
+  border: 3px solid var(--deep-line);
+  border-radius: 0.95rem;
+  background:
+    radial-gradient(circle at 1rem 0.9rem, rgba(255, 255, 255, 0.75) 0 0.3rem, transparent 0.36rem),
+    linear-gradient(135deg, rgba(255, 250, 255, 0.95), rgba(207, 255, 240, 0.72));
+  box-shadow: 0.22rem 0.22rem 0 #ffd164;
+  color: inherit;
+  padding: 0.9rem;
+  text-decoration: none;
+}
+
+.social-grid a {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.social-grid a:hover,
+.social-grid a:focus-visible {
+  outline: none;
+  transform: translate(-2px, -2px);
+  box-shadow:
+    0.34rem 0.34rem 0 #ffd164,
+    0 0 0.9rem rgba(255, 94, 183, 0.38);
+}
+
+.social-grid span,
+.expectation-block h3 {
+  display: inline-flex;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--deep-line);
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: 0.13rem 0.13rem 0 #f7add5;
+  color: var(--deep-line);
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 0.22rem 0.52rem;
+  text-transform: uppercase;
+}
+
+.social-grid strong {
+  display: block;
+  color: var(--hot-pink);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  overflow-wrap: anywhere;
+  text-shadow: 1px 1px 0 #ffd164;
+}
+
+.social-grid p,
+.expectation-block p {
+  margin: 0.35rem 0 0;
+}
+
+.expectations-card {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.expectation-block ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.expectation-block li {
+  margin: 0.28rem 0;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
