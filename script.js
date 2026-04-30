@@ -15,7 +15,10 @@ const flyerFilterButtons = document.querySelectorAll("[data-flyer-filter]");
 const flyerCards = document.querySelectorAll("[data-flyer-tags]");
 const flyerEmptyMessage = document.querySelector(".flyer-empty-message");
 const cuteQuote = document.querySelector("[data-cute-quote]");
-const bookingLinks = document.querySelectorAll(".booking-cta, .hero-actions a[href*='discord.com']");
+const bookingLinks = document.querySelectorAll(".discord-card[href*='discord.com']");
+const copyReviewButton = document.querySelector("[data-copy-review]");
+const reviewForm = document.querySelector(".review-form");
+const reviewHelper = document.querySelector("[data-review-helper]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let loadingTimer;
 let sparkleTimer = 0;
@@ -29,6 +32,8 @@ const cuteQuotes = [
 ];
 
 function setActiveTab(tabId, updateHash = true) {
+  document.body.dataset.activeTab = tabId;
+
   panels.forEach((panel) => {
     panel.classList.toggle("active", panel.dataset.tabPanel === tabId);
   });
@@ -92,6 +97,35 @@ if (cuteQuote) {
     cuteQuote.textContent = cuteQuotes[quoteIndex];
   }, 3200);
 }
+
+copyReviewButton?.addEventListener("click", async () => {
+  if (!reviewForm) {
+    return;
+  }
+
+  const formData = new FormData(reviewForm);
+  const name = formData.get("review-name")?.toString().trim() || "Anonymous";
+  const service = formData.get("review-service")?.toString().trim() || "Commission";
+  const message = formData.get("review-message")?.toString().trim() || "I loved my commission!";
+  const reviewText = `Review for Kiera Virelle\nName/Venue: ${name}\nService: ${service}\nReview: ${message}`;
+
+  try {
+    await navigator.clipboard.writeText(reviewText);
+    if (reviewHelper) {
+      reviewHelper.textContent = "Review copied. Send it to me on Discord when you are ready.";
+      reviewHelper.classList.add("copied");
+    }
+  } catch {
+    if (reviewHelper) {
+      reviewHelper.textContent = "Copy did not work here, but you can still select your review text and send it on Discord.";
+      reviewHelper.classList.remove("copied");
+    }
+  }
+});
+
+reviewForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 
 portfolioImages.forEach((image) => {
   image.addEventListener("error", () => {

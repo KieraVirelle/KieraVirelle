@@ -7,13 +7,8 @@
   <title>Kiera Virelle | Retro Cute Designs</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-active-tab="about">
   <div class="page-frame">
-    <a class="booking-cta" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer" aria-label="Book a commission on Discord with kieravirelle">
-      <span>Message Me on Discord</span>
-      <small>Book a Commission</small>
-    </a>
-
     <header class="site-header">
       <a class="brand" href="#about" aria-label="Kiera Virelle home" data-tab-target="about">
         <span class="brand-mark">KV</span>
@@ -31,6 +26,7 @@
         <button type="button" data-tab-target="flyers">Flyers</button>
         <button type="button" data-tab-target="plugins">Plugins</button>
         <button type="button" data-tab-target="pricing">Pricing</button>
+        <button type="button" data-tab-target="reviews">Reviews</button>
         <button type="button" data-tab-target="contact">Contact me</button>
       </nav>
     </header>
@@ -71,6 +67,12 @@
               <strong>Dino nuggies</strong>
               <strong>Cookies</strong>
               <strong>Too much caffeine</strong>
+              <span class="dino-nuggie" aria-hidden="true">
+                <i class="dino-tail"></i>
+                <i class="dino-head"></i>
+                <i class="dino-leg dino-leg-one"></i>
+                <i class="dino-leg dino-leg-two"></i>
+              </span>
             </article>
             <article class="quote-widget">
               <span>Desk note</span>
@@ -89,8 +91,14 @@
           <div class="hero-actions">
             <button class="button primary" type="button" data-tab-target="portfolio">View work</button>
             <button class="button secondary" type="button" data-tab-target="pricing">See pricing</button>
-            <a class="button secondary" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer">Message me</a>
           </div>
+          <aside class="fan-art-pin" aria-label="Kiera drawing by Shinoboo">
+            <img src="images/Shinoboodrawing.png" alt="Cute drawing of Kiera by Shinoboo">
+            <div>
+              <span>Fan art</span>
+              <strong>Shinoboo drawing</strong>
+            </div>
+          </aside>
         </div>
         <figure class="hero-media">
           <img src="images/NNKiera.png" alt="Neon Neko Kiera character artwork">
@@ -99,7 +107,20 @@
 
       <section id="portfolio" class="tab-panel" data-tab-panel="portfolio">
         <div class="panel-heading">
-          <h2>Full builds, quick-link hubs, menus, portfolios, and service pages.</h2>
+          <h2>
+            Full builds, quick-link hubs, menus, portfolios, and service pages.
+            <span class="heading-bunny" aria-hidden="true">
+              <i class="heading-bunny-ear left-ear"></i>
+              <i class="heading-bunny-ear right-ear"></i>
+              <i class="heading-bunny-body"></i>
+              <i class="heading-bunny-face"></i>
+              <i class="heading-bunny-paw left-paw"></i>
+              <i class="heading-bunny-paw right-paw"></i>
+              <i class="heading-bunny-cookie"></i>
+              <i class="heading-bunny-crumb crumb-one"></i>
+              <i class="heading-bunny-crumb crumb-two"></i>
+            </span>
+          </h2>
         </div>
         <div class="service-strip">
           <article>
@@ -257,6 +278,13 @@
           <button type="button" data-flyer-filter="seasonal">Seasonal</button>
           <button type="button" data-flyer-filter="music">Music promo</button>
         </div>
+        <div class="flyer-film-strip" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="gallery-grid">
           <article class="preview-card video-card" data-flyer-tags="animated venue music">
             <video src="Video/Neon (2).mp4" controls muted playsinline></video>
@@ -314,18 +342,18 @@
             </article>
             <article class="price-card monthly-price">
               <h3>Essential Coverage</h3>
-              <strong>8M Gil / $22</strong>
-              <p>4 static flyers, one per week. Ideal for consistent weekly event coverage.</p>
+              <strong>8M Gil / $16</strong>
+              <p>4 static flyers, one per week. Saves $8 compared to ordering singles.</p>
             </article>
             <article class="price-card monthly-price">
               <h3>Premium Coverage</h3>
-              <strong>11M Gil / $28</strong>
-              <p>2 animated flyers and 2 static flyers for a balanced monthly promo schedule.</p>
+              <strong>11M Gil / $18</strong>
+              <p>2 animated flyers and 2 static flyers. Saves 1M gil and $18 compared to singles.</p>
             </article>
             <article class="price-card monthly-price">
               <h3>Full Motion Coverage</h3>
-              <strong>15M Gil / $40</strong>
-              <p>4 animated flyers. Best for major events, collabs, or high-impact nights.</p>
+              <strong>15M Gil / $23</strong>
+              <p>4 animated flyers. Saves 1M gil and $25 for high-impact promo nights.</p>
             </article>
             <article class="price-card extra-price">
               <h3>Additional Options</h3>
@@ -335,7 +363,7 @@
             <article class="price-card bundle-card extra-price">
               <h3>Notes</h3>
               <strong>Bundle Savings</strong>
-              <p>Monthly packages are discounted compared to single flyer pricing and are built for recurring event coverage.</p>
+              <p>Monthly flyer bundles now give the biggest USD discount while keeping Gil pricing simple.</p>
             </article>
           </div>
         </div>
@@ -343,7 +371,20 @@
 
       <section id="plugins" class="tab-panel" data-tab-panel="plugins">
         <div class="panel-heading">
-          <h2>Our current plugin and bot designs.</h2>
+          <h2>
+            Our current plugin and bot designs.
+            <span class="plugin-robot" aria-hidden="true">
+              <i class="robot-antenna"></i>
+              <i class="robot-head"></i>
+              <i class="robot-eye left-eye"></i>
+              <i class="robot-eye right-eye"></i>
+              <i class="robot-mouth"></i>
+              <i class="robot-body"></i>
+              <i class="robot-arm left-arm"></i>
+              <i class="robot-arm right-arm"></i>
+              <i class="robot-sign">Beep Boop</i>
+            </span>
+          </h2>
         </div>
         <div class="gallery-grid plugin-gallery">
           <article class="preview-card image-card">
@@ -412,7 +453,7 @@
             <p>Pre-made bots are 30M gil / $15. Custom Discord bots start at 50M gil / $30-$50+.</p>
           </article>
         </div>
-        <p class="creator-credit">Plugin and bot creator credit: Nilah Valoryn.</p>
+        <p class="creator-credit"><span>Plugin + bot creator</span> Nilah Valoryn</p>
       </section>
 
       <section id="pricing" class="tab-panel" data-tab-panel="pricing">
@@ -421,7 +462,14 @@
         </div>
         <div class="price-breakdown">
           <section class="price-section">
-            <h3>Flyers</h3>
+            <h3><span class="category-icon icon-flyers" aria-hidden="true"></span>Flyers</h3>
+            <div class="pricing-summary">
+              <span class="calculator-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Bundle math</strong>
+                <p>Monthly flyer bundles save $8-$25 compared to single flyer pricing.</p>
+              </div>
+            </div>
             <div class="clean-price-list">
               <div class="price-row">
                 <div>
@@ -440,27 +488,27 @@
               <div class="price-row">
                 <div>
                   <h4>Essential Coverage</h4>
-                  <p>4 static flyers, ideal for weekly event coverage.</p>
+                  <p>4 static flyers, ideal for weekly event coverage. Saves $8 compared to singles.</p>
                 </div>
-                <strong>8M Gil / $22</strong>
+                <strong>8M Gil / $16</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Premium Coverage</h4>
-                  <p>2 animated flyers and 2 static flyers.</p>
+                  <p>2 animated flyers and 2 static flyers. Saves 1M gil and $18 compared to singles.</p>
                 </div>
-                <strong>11M Gil / $28</strong>
+                <strong>11M Gil / $18</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Full Motion Coverage</h4>
-                  <p>4 animated flyers for high-impact event promotion.</p>
+                  <p>4 animated flyers for high-impact event promotion. Saves 1M gil and $25.</p>
                 </div>
-                <strong>15M Gil / $40</strong>
+                <strong>15M Gil / $23</strong>
               </div>
-              <div class="price-row">
+              <div class="price-row addon-row">
                 <div>
-                  <h4>Add-Ons</h4>
+                  <h4><span class="mini-row-icon icon-addons" aria-hidden="true"></span>Add-Ons</h4>
                   <p>Extra Static: 2M / $6. Extra Animated: 4M / $12. Rush Order, 24-48h: +2M / +$5.</p>
                 </div>
                 <strong>Add-ons</strong>
@@ -469,7 +517,7 @@
           </section>
 
           <section class="price-section">
-            <h3>Plugins</h3>
+            <h3><span class="category-icon icon-plugins" aria-hidden="true"></span>Plugins</h3>
             <div class="clean-price-list">
               <div class="price-row">
                 <div>
@@ -496,7 +544,7 @@
           </section>
 
           <section class="price-section">
-            <h3>Discord Bots</h3>
+            <h3><span class="category-icon icon-plugins" aria-hidden="true"></span>Discord Bots</h3>
             <div class="clean-price-list">
               <div class="price-row">
                 <div>
@@ -516,7 +564,7 @@
           </section>
 
           <section class="price-section">
-            <h3>Website & Carrd</h3>
+            <h3><span class="category-icon icon-websites" aria-hidden="true"></span>Website & Carrd</h3>
             <div class="clean-price-list">
               <div class="price-row">
                 <div>
@@ -536,7 +584,7 @@
           </section>
 
           <section class="price-section">
-            <h3>Bundles</h3>
+            <h3><span class="category-icon icon-addons" aria-hidden="true"></span>Bundles</h3>
             <div class="clean-price-list">
               <div class="price-row bundle-row">
                 <div>
@@ -563,17 +611,77 @@
                   <h4>Gil & USD Pricing</h4>
                   <p>Gil pricing is tailored for in-game services. USD pricing reflects real-world design and development work.</p>
                 </div>
-                <strong>Cash App / Ko-fi</strong>
+                <strong>Ko-fi / BMC</strong>
               </div>
               <div class="price-row">
                 <div>
                   <h4>Best Value</h4>
-                  <p>Monthly flyer packages are ideal for consistent event coverage. Bundles offer the best value for venues and long-term clients.</p>
+                  <p>Monthly flyer packages are the strongest USD deal for recurring event coverage. Larger bundles are best for venues and long-term clients.</p>
                 </div>
                 <strong>Bundles</strong>
               </div>
             </div>
           </section>
+        </div>
+      </section>
+
+      <section id="reviews" class="tab-panel" data-tab-panel="reviews">
+        <div class="panel-heading">
+          <h2>Sweet words, finished orders, and happy little reviews.</h2>
+        </div>
+        <div class="review-layout">
+          <article class="review-thanks-card">
+            <span class="review-kicker">From Kiera</span>
+            <h3>Thank you for trusting me with your commission.</h3>
+            <p>
+              Whether you ordered a flyer, Carrd, website, plugin, bot, or another cute little chaos project, I am genuinely grateful you chose me to make it for you.
+            </p>
+            <p>
+              If you loved the service, the communication, or the final result, leaving a review helps future clients feel confident booking with me.
+            </p>
+            <strong>Cookies were consumed. Dino nuggies were honored. Your support means everything.</strong>
+          </article>
+
+          <article class="review-form-card">
+            <span class="review-kicker">Leave a review</span>
+            <h3>Tell me what you thought</h3>
+            <form class="review-form">
+              <label>
+                Name or venue
+                <input type="text" name="review-name" placeholder="Your name, venue, or character">
+              </label>
+              <label>
+                Service purchased
+                <select name="review-service">
+                  <option>Flyer</option>
+                  <option>Website / Carrd</option>
+                  <option>Plugin</option>
+                  <option>Discord bot</option>
+                  <option>Other commission</option>
+                </select>
+              </label>
+              <label>
+                Your review
+                <textarea name="review-message" rows="6" placeholder="What did you like about the process, communication, or finished piece?"></textarea>
+              </label>
+              <div class="review-actions">
+                <a class="button primary" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer">Send on Discord</a>
+                <button class="button secondary" type="button" data-copy-review>Copy review</button>
+              </div>
+              <p class="review-helper" data-review-helper>Write your review here, copy it, then send it to me on Discord.</p>
+            </form>
+          </article>
+
+          <article class="review-note-card">
+            <span class="review-heart" aria-hidden="true"></span>
+            <h3>Helpful review ideas</h3>
+            <ul>
+              <li>What service did you order?</li>
+              <li>Was communication clear?</li>
+              <li>Did the final design match your vibe?</li>
+              <li>Would you book again?</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -583,22 +691,22 @@
             <h2>Contact & payment</h2>
             <p>Ready for something cute? Send your idea, references, deadline, and which package you want. I take Gil and USD payments.</p>
             <div class="social-grid">
-              <article class="social-card discord-card">
+              <a class="social-card discord-card" href="https://discord.com/users/1474448129649672485" target="_blank" rel="noreferrer">
                 <span class="pay-emblem">D</span>
                 <div>
                   <span>Discord</span>
                   <strong>kieravirelle</strong>
                 </div>
                 <p>Best place to message me, send references, and confirm your commission details.</p>
-              </article>
-              <a class="social-card cash-card" href="https://cash.app/$kieravirelle" target="_blank" rel="noreferrer">
-                <span class="pay-emblem">$</span>
-                <div>
-                  <span>Cash App</span>
-                  <strong>$kieravirelle</strong>
-                </div>
-                <p>USD payments for confirmed orders.</p>
               </a>
+              <article class="social-card plugin-contact-card">
+                <span class="pay-emblem">B</span>
+                <div>
+                  <span>Plugin / bot questions</span>
+                  <strong>.brushie</strong>
+                </div>
+                <p>Message Nilah Valoryn on Discord for plugin questions, bot ideas, workflow details, and custom bot planning.</p>
+              </article>
               <a class="social-card kofi-card" href="https://buymeacoffee.com/kieravireli" target="_blank" rel="noreferrer">
                 <span class="pay-emblem">K</span>
                 <div>
