@@ -1,294 +1,591 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crimson Byte Studio - Designs & Plugins</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=UnifrakturMaguntia&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Kiera Virelle designs pastel retro websites, Carrds, plugins, flyers, previews, and visual branding.">
+  <title>Kiera Virelle | Retro Cute Designs</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="rose-glow rose-glow--left"></div>
-  <div class="rose-glow rose-glow--right"></div>
-  <div class="moth-flight" aria-hidden="true">
-    <img class="moth-icon moth-icon--fly" src="images/Black&WhiteMoth.png" alt="" />
-    <img class="moth-icon moth-icon--fly" src="images/Black&WhiteMoth.png" alt="" />
-    <img class="moth-icon moth-icon--fly" src="images/Black&WhiteMoth.png" alt="" />
-    <img class="moth-icon moth-icon--fly" src="images/Black&WhiteMoth.png" alt="" />
-    <img class="moth-icon moth-icon--fly" src="images/Black&WhiteMoth.png" alt="" />
+  <div class="page-frame">
+    <header class="site-header">
+      <a class="brand" href="#about" aria-label="Kiera Virelle home" data-tab-target="about">
+        <span class="brand-mark">KV</span>
+        <span>Kiera Virelle</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <button class="active" type="button" data-tab-target="about">About me</button>
+        <button type="button" data-tab-target="portfolio">Websites/Carrds</button>
+        <button type="button" data-tab-target="flyers">Flyers</button>
+        <button type="button" data-tab-target="plugins">Plugins</button>
+        <button type="button" data-tab-target="pricing">Pricing</button>
+        <button type="button" data-tab-target="contact">Contact me</button>
+      </nav>
+    </header>
+
+    <main class="site-stage">
+      <section id="about" class="tab-panel active" data-tab-panel="about">
+        <div class="hero-copy">
+          <p class="eyebrow hero-ticket">Now designing</p>
+          <h1>Kiera Virelle: Digital Mischief.</h1>
+          <div class="hero-tags" aria-label="Services">
+            <span>Websites</span>
+            <span>Carrds</span>
+            <span>Flyers</span>
+            <span>Plugins</span>
+            <span>Bots</span>
+          </div>
+          <div class="hero-bio">
+            <p>
+              Hai Hai, I'm Kiera Virelle, owner of Neon Neko and professional pink-pixel menace. I love designing websites and Carrds for people in the community, plus flyers, plugins, and Discord bots when the caffeine starts making decisions.
+            </p>
+            <p>
+              Everything I build helps fund Neon Neko, including staff pay, DRTs, giveaways, event chaos, and all the cute little things that keep the venue glowing.
+            </p>
+            <strong>Built on no sleep and too much caffeine.</strong>
+          </div>
+          <div class="hero-actions">
+            <button class="button primary" type="button" data-tab-target="portfolio">View work</button>
+            <button class="button secondary" type="button" data-tab-target="pricing">See pricing</button>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="images/NNKiera.png" alt="Neon Neko Kiera character artwork">
+        </figure>
+      </section>
+
+      <section id="portfolio" class="tab-panel" data-tab-panel="portfolio">
+        <div class="panel-heading">
+          <h2>Full builds, quick-link hubs, menus, portfolios, and service pages.</h2>
+        </div>
+        <div class="service-strip">
+          <article>
+            <span class="mini-icon">W</span>
+            <h3>Websites</h3>
+            <p>Multi-section pages for portfolios, shops, venues, services, and polished brand homes.</p>
+          </article>
+          <article>
+            <span class="mini-icon">C</span>
+            <h3>Carrds</h3>
+            <p>Compact, cute pages for links, menus, commissions, community info, and profiles.</p>
+          </article>
+          <article>
+            <span class="mini-icon">R</span>
+            <h3>Responsive</h3>
+            <p>Layouts are tuned for phone, tablet, and desktop so the design stays readable.</p>
+          </article>
+        </div>
+        <div class="portfolio-columns">
+          <div>
+            <h3 class="list-title">Websites</h3>
+            <div class="project-grid">
+              <article class="project-card website-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/Platy.png" data-media-type="image" data-media-title="Platy Art">
+                  <img src="images/Platy.png" alt="Platy Art website screenshot">
+                  <span>Platy Art</span>
+                </button>
+                <h4>Platy Art</h4>
+                <p>Portfolio website for visual work and creator branding.</p>
+                <a href="https://platyart.com/" target="_blank" rel="noreferrer">Visit website</a>
+              </article>
+              <article class="project-card rosarium-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/Eden.png" data-media-type="image" data-media-title="Eden Rosarium">
+                  <img src="images/Eden.png" alt="Eden Rosarium website screenshot">
+                  <span>Eden Rosarium</span>
+                </button>
+                <h4>Eden Rosarium</h4>
+                <p>Elegant service presence with visual and contact flow.</p>
+                <a href="https://edenrosarium.com/" target="_blank" rel="noreferrer">Visit website</a>
+              </article>
+              <article class="project-card vault-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/TheVault.png" data-media-type="image" data-media-title="The Vault Collabs">
+                  <img src="images/TheVault.png" alt="The Vault Collabs website screenshot">
+                  <span>The Vault Collabs</span>
+                </button>
+                <h4>The Vault Collabs</h4>
+                <p>Brand-focused site for collaborations and project previews.</p>
+                <a href="https://thevaultcollabs.com/" target="_blank" rel="noreferrer">Visit website</a>
+              </article>
+              <article class="project-card housing-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/Anna.png" data-media-type="image" data-media-title="Anna Stepnuck Housing">
+                  <img src="images/Anna.png" alt="Anna Stepnuck Housing website screenshot">
+                  <span>Anna Stepnuck Housing</span>
+                </button>
+                <h4>Anna Stepnuck Housing</h4>
+                <p>Service site for housing work, examples, and booking interest.</p>
+                <a href="https://annastepnuckhousing.com/" target="_blank" rel="noreferrer">Visit website</a>
+              </article>
+            </div>
+          </div>
+          <div>
+            <h3 class="list-title">Carrds</h3>
+            <div class="project-grid">
+              <article class="project-card pixel-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/PixelPride.png" data-media-type="image" data-media-title="Pixel Pride XIV">
+                  <img src="images/PixelPride.png" alt="Pixel Pride XIV Carrd screenshot">
+                  <span>Pixel Pride XIV</span>
+                </button>
+                <h4>Pixel Pride XIV</h4>
+                <p>Community-facing Carrd for quick info and links.</p>
+                <a href="https://pixelpridexiv.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+              <article class="project-card kirin-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/Kirin.png" data-media-type="image" data-media-title="Kirin Designs">
+                  <img src="images/Kirin.png" alt="Kirin Designs Carrd screenshot">
+                  <span>Kirin Designs</span>
+                </button>
+                <h4>Kirin Designs</h4>
+                <p>Design-service Carrd for offers, portfolio links, and contact.</p>
+                <a href="https://kirindesigns.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+              <article class="project-card vashaa-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/VashaShutterBun.png" data-media-type="image" data-media-title="Vashaa Kusker">
+                  <img src="images/VashaShutterBun.png" alt="Vashaa Kusker Carrd screenshot">
+                  <span>Vashaa Kusker</span>
+                </button>
+                <h4>Vashaa Kusker</h4>
+                <p>Personal Carrd profile with compact branded navigation.</p>
+                <a href="https://vashaakusker.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+              <article class="project-card starlight-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/YultideMenu.png" data-media-type="image" data-media-title="Starlight Cafe Menu">
+                  <img src="images/YultideMenu.png" alt="Starlight Cafe Menu Carrd screenshot">
+                  <span>Starlight Cafe Menu</span>
+                </button>
+                <h4>Starlight Cafe Menu</h4>
+                <p>Menu Carrd with a soft flow for browsing offerings.</p>
+                <a href="https://starlightcafemenu.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+              <article class="project-card hearts-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/HatchingHearts.png" data-media-type="image" data-media-title="Hatching Hearts">
+                  <img src="images/HatchingHearts.png" alt="Hatching Hearts Carrd screenshot">
+                  <span>Hatching Hearts</span>
+                </button>
+                <h4>Hatching Hearts</h4>
+                <p>Cute themed Carrd for a focused concept and calls to action.</p>
+                <a href="https://hatchinghearts.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+              <article class="project-card oats-art">
+                <button class="project-thumb media-open" type="button" data-media-src="images/Daddyoats.png" data-media-type="image" data-media-title="Daddy Oats">
+                  <img src="images/Daddyoats.png" alt="Daddy Oats Carrd screenshot">
+                  <span>Daddy Oats</span>
+                </button>
+                <h4>Daddy Oats</h4>
+                <p>Playful Carrd landing page with quick links and a clear branded feel.</p>
+                <a href="https://daddyoats.carrd.co/" target="_blank" rel="noreferrer">View Carrd</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="web-pricing-wrap" aria-label="Website and Carrd pricing">
+          <div class="pricing-ribbon">
+            <span>Website & Carrd Pricing</span>
+            <strong>Simple builds, full Carrds, and custom websites</strong>
+          </div>
+          <div class="clean-price-list compact">
+            <div class="price-row">
+              <div>
+                <h3>Basic Carrd</h3>
+                <p>Clean one-page Carrd for links, quick info, and a cute branded landing page.</p>
+              </div>
+              <strong>30M Gil / $30</strong>
+            </div>
+            <div class="price-row">
+              <div>
+                <h3>Full Website</h3>
+                <p>Full custom website build. I cover the first year of the website.</p>
+              </div>
+              <strong>150M Gil / $120</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="flyers" class="tab-panel" data-tab-panel="flyers">
+        <div class="panel-heading">
+          <h2>Cute promo flyers for events, venues, and big-night chaos.</h2>
+        </div>
+        <div class="gallery-grid">
+          <article class="preview-card video-card">
+            <video src="Video/Neon (2).mp4" controls muted playsinline></video>
+            <h3>Video Flyers</h3>
+            <p>Short-form animated video flyers for social posts, music-backed promos, and venue ads.</p>
+            <button class="lightbox-button" type="button" data-media-src="Video/Neon (2).mp4" data-media-type="video" data-media-title="Video Flyers">Open full video</button>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/Angels.gif" data-media-type="image" data-media-title="Animated Flyers">
+              <img class="portrait-preview" src="images/Angels.gif" alt="Angels versus Demons animated flyer preview">
+            </button>
+            <h3>Animated Flyers</h3>
+            <p>Motion flyers for parties, games, giveaways, and venue nights. Starts at 6M gil.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/PastelRave.gif" data-media-type="image" data-media-title="Pastel Rave Flyer">
+              <img class="portrait-preview" src="images/PastelRave.gif" alt="Pastel Rave animated flyer preview">
+            </button>
+            <h3>Pastel Rave Flyer</h3>
+            <p>Bright pastel rave promo with animated club energy, cute color, and high-impact event styling.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/Hatching.gif" data-media-type="image" data-media-title="Music Promos">
+              <img class="portrait-preview" src="images/Hatching.gif" alt="Hatching Hearts animated flyer preview">
+            </button>
+            <h3>Music Promos</h3>
+            <p>Animated or music-ready visuals for social posting and event hype. Starts at 6M gil.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/Is Hiring (2).gif" data-media-type="image" data-media-title="Hiring Posts">
+              <img class="portrait-preview" src="images/Is Hiring (2).gif" alt="Animated hiring flyer preview">
+            </button>
+            <h3>Hiring Posts</h3>
+            <p>Role callouts, staff recruitment, venue hiring, and attention-grabbing announcement posts.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/NNStPattyTake2.gif" data-media-type="image" data-media-title="Seasonal Flyers">
+              <img class="portrait-preview" src="images/NNStPattyTake2.gif" alt="St. Patrick themed animated flyer preview">
+            </button>
+            <h3>Seasonal Flyers</h3>
+            <p>Holiday, theme-night, and special event designs with custom branding and visuals.</p>
+          </article>
+        </div>
+        <div class="flyer-pricing-wrap" aria-label="Flyer pricing">
+          <div class="pricing-ribbon">
+            <span>Flyer Pricing</span>
+            <strong>Static, animated, and monthly promo bundles</strong>
+          </div>
+          <div class="flyer-pricing">
+            <article class="price-card single-price">
+              <h3>Single Flyers</h3>
+              <strong>3M / 6M Gil</strong>
+              <p>Static Flyer - 3M gil / $8. Animated Flyer - 6M gil / $15. Animated flyers can include motion, effects, and music.</p>
+            </article>
+            <article class="price-card monthly-price">
+              <h3>Essential Coverage</h3>
+              <strong>11M Gil / $30</strong>
+              <p>4 static flyers, one per week. Ideal for consistent weekly event coverage.</p>
+            </article>
+            <article class="price-card monthly-price">
+              <h3>Premium Coverage</h3>
+              <strong>16M Gil / $45</strong>
+              <p>2 animated flyers and 2 static flyers for a balanced monthly promo schedule.</p>
+            </article>
+            <article class="price-card monthly-price">
+              <h3>Full Motion Coverage</h3>
+              <strong>20M Gil / $60</strong>
+              <p>4 animated flyers. Best for major events, collabs, or high-impact nights.</p>
+            </article>
+            <article class="price-card extra-price">
+              <h3>Additional Options</h3>
+              <strong>+2M Rush</strong>
+              <p>Extra Static Flyer - 3M gil / $8. Extra Animated Flyer - 6M gil / $15. Rush Order, 24-48h, is +2M gil / +$5.</p>
+            </article>
+            <article class="price-card bundle-card extra-price">
+              <h3>Notes</h3>
+              <strong>Bundle Savings</strong>
+              <p>Monthly packages are discounted compared to single flyer pricing and are built for recurring event coverage.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="plugins" class="tab-panel" data-tab-panel="plugins">
+        <div class="panel-heading">
+          <h2>Our current plugin and bot designs.</h2>
+        </div>
+        <div class="gallery-grid plugin-gallery">
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/Raffler.png" data-media-type="image" data-media-title="Raffler">
+              <img src="images/Raffler.png" alt="Raffler plugin interface preview">
+            </button>
+            <h3>Raffler</h3>
+            <p>Raffle ticket tools, Discord preview, summaries, and export-ready controls.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/DRT.png" data-media-type="image" data-media-title="Death Roll Tournament">
+              <img src="images/DRT.png" alt="Death Roll Tournament plugin interface preview">
+            </button>
+            <h3>Death Roll Tournament</h3>
+            <p>Bracket setup, match tracking, timers, and shout templates.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/NNShout.png" data-media-type="image" data-media-title="Shout Runner">
+              <img src="images/NNShout.png" alt="Shout Runner plugin interface preview">
+            </button>
+            <h3>Shout Runner</h3>
+            <p>Advertisement macros, world routing, logs, and event outreach settings.</p>
+          </article>
+          <article class="preview-card image-card plugin-placeholder-card">
+            <div class="plugin-placeholder-thumb" aria-hidden="true">
+              <span>PF</span>
+              <small>Preview coming soon</small>
+            </div>
+            <h3>Party Finder Bot</h3>
+            <p>Runs shouts to advertise your event, Free Company recruitment, community promos, and other announcement needs.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/DRTBOT.png" data-media-type="image" data-media-title="DRT Bot">
+              <img src="images/DRTBOT.png" alt="DRT bot Discord message preview">
+            </button>
+            <h3>DRT Bot</h3>
+            <p>Discord signup message with buttons for joining, nicknames, friends, and withdrawals.</p>
+          </article>
+          <article class="preview-card image-card">
+            <button class="media-open" type="button" data-media-src="images/crystalclock_weekly.png" data-media-type="image" data-media-title="Crystal Clock">
+              <img src="images/crystalclock_weekly.png" alt="Crystal Clock weekly opening bot preview">
+            </button>
+            <h3>Crystal Clock</h3>
+            <p>Weekly opening bot preview with schedules, roles, status, and confirmation controls.</p>
+          </article>
+        </div>
+        <div class="plugin-pricing-guide">
+          <article>
+            <span class="pill">Individual</span>
+            <h3>30M Gil each</h3>
+            <p>Individual-person plugin access for DRT, Raffler, Shout Runner, or Party Finder.</p>
+          </article>
+          <article>
+            <span class="pill">Venue bundle</span>
+            <h3>50M per system</h3>
+            <p>Party Finder and Shout Runner include up to 3 people. DRT and Raffler include 2 people: the main user and one backup staff member.</p>
+          </article>
+          <article>
+            <span class="pill">Best value</span>
+            <h3>100M Gil bundle</h3>
+            <p>All plugin bundle includes DRT, Raffler, Party Finder, and Shout Bot, saving 20M gil.</p>
+          </article>
+          <article>
+            <span class="pill">Bot pricing</span>
+            <h3>30M / 50M+ Gil</h3>
+            <p>Pre-made Discord bots are 30M gil. Custom Discord bots built from the ground up start at 50M gil.</p>
+          </article>
+        </div>
+        <p class="creator-credit">Plugin and bot creator credit: Nilah Valoryn.</p>
+      </section>
+
+      <section id="pricing" class="tab-panel" data-tab-panel="pricing">
+        <div class="panel-heading">
+          <h2>Pricing, IRL payments, and bundle breakdown.</h2>
+        </div>
+        <div class="price-breakdown">
+          <section class="price-section">
+            <h3>Flyers</h3>
+            <div class="clean-price-list">
+              <div class="price-row">
+                <div>
+                  <h4>Static Flyer</h4>
+                  <p>Single static flyer for events, promos, hiring posts, menus, or announcements.</p>
+                </div>
+                <strong>3M Gil / $8</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Animated Flyer</h4>
+                  <p>Animated flyers may include motion, effects, and music.</p>
+                </div>
+                <strong>6M Gil / $15</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Essential Coverage</h4>
+                  <p>4 static flyers, ideal for weekly event coverage.</p>
+                </div>
+                <strong>11M Gil / $30</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Premium Coverage</h4>
+                  <p>2 animated flyers and 2 static flyers.</p>
+                </div>
+                <strong>16M Gil / $45</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Full Motion Coverage</h4>
+                  <p>4 animated flyers for high-impact event promotion.</p>
+                </div>
+                <strong>20M Gil / $60</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Add-Ons</h4>
+                  <p>Extra Static: 3M / $8. Extra Animated: 6M / $15. Rush Order, 24-48h: +2M / +$5.</p>
+                </div>
+                <strong>Add-ons</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="price-section">
+            <h3>Plugins</h3>
+            <div class="clean-price-list">
+              <div class="price-row">
+                <div>
+                  <h4>Individual Plugin Access</h4>
+                  <p>DRT, Raffler, Party Finder, or Shout Bot.</p>
+                </div>
+                <strong>30M Gil / $15 each</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>All Plugin Bundle</h4>
+                  <p>Includes all plugins. Saves 20M Gil / about $10.</p>
+                </div>
+                <strong>100M Gil / $50</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Venue Plugin License</h4>
+                  <p>Per system, expanded multi-user access. Party Finder and Shout Runner include up to 3 people. DRT and Raffler include 2 people.</p>
+                </div>
+                <strong>50M Gil / $25 each</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="price-section">
+            <h3>Discord Bots</h3>
+            <div class="clean-price-list">
+              <div class="price-row">
+                <div>
+                  <h4>Pre-Made Bot</h4>
+                  <p>Already-created bot setup for Discord workflows.</p>
+                </div>
+                <strong>30M Gil / $15</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Custom Bot</h4>
+                  <p>Ground-up custom Discord bot build based on your workflow and requested features.</p>
+                </div>
+                <strong>50M+ Gil / $30-$50+</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="price-section">
+            <h3>Website & Carrd</h3>
+            <div class="clean-price-list">
+              <div class="price-row">
+                <div>
+                  <h4>Basic Carrd</h4>
+                  <p>One-page Carrd for links, quick info, and a branded landing page.</p>
+                </div>
+                <strong>30M Gil / $30</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Full Website</h4>
+                  <p>Full custom website build. I cover the first year of the website.</p>
+                </div>
+                <strong>150M Gil / $120</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="price-section">
+            <h3>Bundles</h3>
+            <div class="clean-price-list">
+              <div class="price-row bundle-row">
+                <div>
+                  <h4>Carrd + Plugin Bundle</h4>
+                  <p>Basic Carrd plus all plugins. Saves 20M Gil / about $10 on plugins.</p>
+                </div>
+                <strong>130M Gil / $60</strong>
+              </div>
+              <div class="price-row bundle-row">
+                <div>
+                  <h4>Website + Plugin Bundle</h4>
+                  <p>Includes full setup and integration.</p>
+                </div>
+                <strong>250M Gil / $190</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="price-section">
+            <h3>Notes</h3>
+            <div class="clean-price-list">
+              <div class="price-row">
+                <div>
+                  <h4>Gil & USD Pricing</h4>
+                  <p>Gil pricing is tailored for in-game services. USD pricing reflects real-world design and development work.</p>
+                </div>
+                <strong>Cash App / Ko-fi</strong>
+              </div>
+              <div class="price-row">
+                <div>
+                  <h4>Best Value</h4>
+                  <p>Monthly flyer packages are ideal for consistent event coverage. Bundles offer the best value for venues and long-term clients.</p>
+                </div>
+                <strong>Bundles</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="contact" class="tab-panel" data-tab-panel="contact">
+        <div class="contact-layout">
+          <div>
+            <h2>Ready for something cute?</h2>
+            <p>Send your idea, deadline, favorite colors, references, and any images you want included. Gil and USD payment options are available.</p>
+            <div class="contact-links">
+              <a class="button primary" href="mailto:hello@kieravirelle.com">Email Kiera</a>
+              <button class="button secondary" type="button" data-tab-target="pricing">Check pricing</button>
+            </div>
+            <div class="payment-options">
+              <article>
+                <span>Discord</span>
+                <strong>Kiera Virelle</strong>
+                <p>Best place to ask questions, send references, and confirm your build details.</p>
+              </article>
+              <article>
+                <span>Cash App</span>
+                <strong>USD accepted</strong>
+                <p>Cash App payments are available for USD orders once your package quote is confirmed.</p>
+              </article>
+              <article>
+                <span>Ko-fi</span>
+                <strong>USD accepted</strong>
+                <p>Ko-fi payments are available for USD orders, tips, or invoice-style payment links.</p>
+              </article>
+            </div>
+          </div>
+          <div class="uploader">
+            <label for="preview-upload">
+              <span>Add preview images</span>
+              <small>Choose local screenshots to preview them here while planning the page.</small>
+            </label>
+            <input id="preview-upload" type="file" accept="image/*" multiple>
+            <div id="upload-gallery" class="upload-gallery" aria-live="polite">
+              <article class="preview-card image-card">
+                <img src="images/DRTBOT.png" alt="DRT Bot Discord preview">
+                <h3>Discord plugin preview</h3>
+                <p>Bot post examples can live beside plugin pages and screenshots.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-  <div class="side-moths" aria-hidden="true">
-    <img class="side-moth side-moth--left" src="images/Black&WhiteMoth.png" alt="" />
-    <img class="side-moth side-moth--right" src="images/Black&WhiteMoth.png" alt="" />
-  </div>
 
-  <header class="hero">
-    <div class="hero__layout">
-      <div class="hero-floating-image">
-        <img src="images/KieraProfessional.png" alt="Kiera Virelle" />
+  <div class="lightbox" id="media-lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-bar">
+        <h2 id="lightbox-title">Preview</h2>
+        <button type="button" data-lightbox-close>Close</button>
       </div>
-
-      <h1 class="hero__title">
-        Crimson Byte Studio
-        <span class="title__whisper">Designs, Event Coordination & Plugins</span>
-        <span class="title__stroke">by Kiera Virelle</span>
-      </h1>
-
-      <p class="hero__lede">
-        Carrds, venues, discords, and plugins built with intention. Gothic, pastel, neon, regal - every build is tuned to your world.
-      </p>
-
-      <div class="hero__cta">
-        <a class="button button--primary" href="#services">View Packages</a>
-        <a class="button button--ghost" href="#contact">Book a Build</a>
-      </div>
-
-      <div class="hero__stats">
-        <div class="stat">
-          <span class="stat__label">Signature vibe</span>
-          <span class="stat__value">Crimson aesthetic / Bespoke builds</span>
-          <span class="stat__value sub">Dark, clean, tailored</span>
-          <span class="stat__value sub">Made to fit your world</span>
-        </div>
-        <div class="stat">
-          <span class="stat__label">Philosophy</span>
-          <span class="stat__value">Clean code, clear flow</span>
-          <span class="stat__value sub">Design with intention</span>
-          <span class="stat__value sub">Thoughtful, not templated</span>
-        </div>
-        <div class="stat">
-          <span class="stat__label">Turnaround</span>
-          <span class="stat__value">5-10 days, depending on magic</span>
-          <span class="stat__value sub">Fast, careful, on-brand</span>
-          <span class="stat__value sub">Efficient without rushing</span>
-        </div>
-      </div>
+      <div class="lightbox-media" id="lightbox-media"></div>
     </div>
-  </header>
-
-  <main>
-    <section class="panel panel--glass showcase" id="showcase">
-      <div class="panel__head">
-        <p class="kicker">Completed builds</p>
-        <h2>Fresh launches, ready to tour.</h2>
-      </div>
-      <p class="body showcase__lede">
-        Three distinct worlds in the last sprint - each tuned to its own pulse. Hover to see the vibe, tap to visit live.
-      </p>
-      <div class="showcase__grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;align-items:stretch;">
-        <article class="showcase-card" style="position:relative;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.4rem 1.35rem 1.6rem;background:radial-gradient(circle at 25% 25%, rgba(211,25,58,0.12), transparent 48%),radial-gradient(circle at 78% 68%, rgba(255,255,255,0.08), transparent 55%),linear-gradient(160deg, rgba(0,0,0,0.52), rgba(211,25,58,0.06));box-shadow:0 16px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;min-height:360px;">
-          <div class="showcase-card__glow"></div>
-          <div class="showcase-card__header">
-            <span class="pill pill--hot" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.18);background:linear-gradient(120deg,#d3193a,#ff375f);color:#fff;box-shadow:0 0 22px rgba(211,25,58,0.4);">Live</span>
-            <span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.06);color:#f4e9dd;">Carrd</span>
-          </div>
-          <h3>Starlight Cafe Menu</h3>
-          <p class="body">Soft lilac gradients, floating glass, and a menu flow built for quick scanning and late-night cravings.</p>
-          <ul class="showcase-card__meta" style="list-style:none;padding-left:0;margin:0.75rem 0 1rem;line-height:1.55;color:#d6c9bc;">
-            <li>Warm fairycore palette, glimmer borders</li>
-            <li>Menu anchors + CTA buttons for orders</li>
-            <li>Micro-animations that stay light on mobile</li>
-          </ul>
-          <a class="button button--primary" href="https://starlightcafemenu.carrd.co/" target="_blank" rel="noreferrer">View live</a>
-        </article>
-
-        <article class="showcase-card" style="position:relative;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.4rem 1.35rem 1.6rem;background:radial-gradient(circle at 25% 25%, rgba(211,25,58,0.12), transparent 48%),radial-gradient(circle at 78% 68%, rgba(255,255,255,0.08), transparent 55%),linear-gradient(160deg, rgba(0,0,0,0.52), rgba(211,25,58,0.06));box-shadow:0 16px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;min-height:360px;">
-          <div class="showcase-card__glow"></div>
-          <div class="showcase-card__header">
-            <span class="pill pill--hot" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.18);background:linear-gradient(120deg,#d3193a,#ff375f);color:#fff;box-shadow:0 0 22px rgba(211,25,58,0.4);">Live</span>
-            <span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.06);color:#f4e9dd;">Carrd</span>
-          </div>
-          <h3>DJ Pete Bunny</h3>
-          <p class="body">Bold cyan-on-ink palette, punchy typography, and a flyer-style layout built for quick booking clicks.</p>
-          <ul class="showcase-card__meta" style="list-style:none;padding-left:0;margin:0.75rem 0 1rem;line-height:1.55;color:#d6c9bc;">
-            <li>Hero CTA stack with socials + booking</li>
-            <li>Flashy accent lines and bass-line glow</li>
-            <li>Optimized for short scroll with loud headers</li>
-          </ul>
-          <a class="button button--primary" href="https://djpetebunny.carrd.co/" target="_blank" rel="noreferrer">View live</a>
-        </article>
-
-        <article class="showcase-card" style="position:relative;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.4rem 1.35rem 1.6rem;background:radial-gradient(circle at 25% 25%, rgba(211,25,58,0.12), transparent 48%),radial-gradient(circle at 78% 68%, rgba(255,255,255,0.08), transparent 55%),linear-gradient(160deg, rgba(0,0,0,0.52), rgba(211,25,58,0.06));box-shadow:0 16px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;min-height:360px;">
-          <div class="showcase-card__glow"></div>
-          <div class="showcase-card__header">
-            <span class="pill pill--hot" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.18);background:linear-gradient(120deg,#d3193a,#ff375f);color:#fff;box-shadow:0 0 22px rgba(211,25,58,0.4);">Live</span>
-            <span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0.28rem 0.65rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.06);color:#f4e9dd;">Website</span>
-          </div>
-          <h3>The Manor Club</h3>
-          <p class="body">Deep noir gradients with champagne highlights, framing a luxe landing page for the club's reopening.</p>
-          <ul class="showcase-card__meta" style="list-style:none;padding-left:0;margin:0.75rem 0 1rem;line-height:1.55;color:#d6c9bc;">
-            <li>Marquee hero with framed crest</li>
-            <li>Sectioned story flow + staff highlights</li>
-            <li>Contact + socials anchored for bookings</li>
-          </ul>
-          <a class="button button--primary" href="https://manorclub.cc/index.html" target="_blank" rel="noreferrer">Visit site</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="tabs" id="works">
-      <div class="tabs__header">
-        <p class="kicker">Choose a service</p>
-        <div class="tab-buttons" role="tablist">
-          <button class="tab-button is-active" data-tab="designs" role="tab" aria-selected="true">Carrds & Sites</button>
-          <button class="tab-button" data-tab="events" role="tab" aria-selected="false">Venues & Discords</button>
-          <button class="tab-button" data-tab="plugins" role="tab" aria-selected="false">Bots & Plugins</button>
-        </div>
-      </div>
-      <div class="tabs__body">
-        <article class="tab-panel is-active" id="designs" role="tabpanel">
-          <h3>Custom Carrds and full websites for any vibe.</h3>
-          <ul class="list">
-            <li>Layered gradients, serif headers, animated dividers; gothic to cyber glow.</li>
-            <li>Tabbed flows, accordions, hero CTAs that guide players and clients cleanly.</li>
-            <li>Copy coaching to keep your pitch sharp without fluff.</li>
-          </ul>
-        </article>
-        <article class="tab-panel" id="events" role="tabpanel">
-          <h3>Venues and Discord ecosystems that actually run.</h3>
-          <ul class="list">
-            <li>Venue hubs with live schedules, performer grids, RSVPs, and sponsor slots.</li>
-            <li>Discord layouts: roles, channels, onboarding flows, custom branding.</li>
-            <li>Event runbooks so launches hit smoothly, not chaotically.</li>
-          </ul>
-        </article>
-        <article class="tab-panel" id="plugins" role="tabpanel">
-          <h3>Bespoke bots and plugin showcases.</h3>
-          <ul class="list">
-            <li>Fully customized Discord bots tuned to your community workflows.</li>
-            <li>Plugin microsites for Raffler, DRT, Shout Runner, and new custom tools.</li>
-            <li>Lightweight embeds and widgets that load fast and stay on-brand.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel panel--stacked" id="services">
-      <div class="panel__head">
-        <p class="kicker">Offerings</p>
-        <h2>Choose your build.</h2>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card__tag">Essential</div>
-          <p class="card__price">20 million gil</p>
-          <p class="card__lede">A polished 4-5 page Carrd or simple website built with clean typography, smooth motion, and a crisp visual foundation.</p>
-          <ul class="card__list">
-            <li>On-brand palette with refined serif + modern pairing</li>
-            <li>Hero, services, gallery, and contact micro-sections</li>
-            <li>Light motion effects: fades, glints, and subtle line reveals</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card__tag card__tag--accent">Enhanced</div>
-          <p class="card__price">40 million gil</p>
-          <p class="card__lede">A more dynamic, interactive build designed for venues, artists, and communities needing elevated presentation and flow.</p>
-          <ul class="card__list">
-            <li>Tabbed layouts, accordions, and structured grids</li>
-            <li>Custom copy crafted to match your voice and theme</li>
-            <li>Space for interactive elements such as raffles, RSVPs, or visual sliders</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card__tag card__tag--rare">Premium</div>
-          <p class="card__price">60 million gil</p>
-          <p class="card__lede">A fully developed site + Discord integration package, built for communities looking for cohesive branding and a smooth launch experience.</p>
-          <ul class="card__list">
-            <li>Complete Discord setup with roles, channels, and organization</li>
-            <li>Event-ready layouts with schedules, performers, and setlists</li>
-            <li>Launch choreography: pacing, linking, and quality assurance</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="accordions" id="features">
-      <div class="panel__head">
-        <p class="kicker">Plugins</p>
-        <h2>Code that behaves (most days).</h2>
-      </div>
-      <div class="accordion" data-accordion>
-        <button class="accordion__trigger" aria-expanded="false">
-          <span>Raffler</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="accordion__body">
-          Automates raffles, tracks gil, and protects against crashes. Discord integration included.
-          Price: 30 million gil standalone.
-        </div>
-      </div>
-
-      <div class="accordion" data-accordion>
-        <button class="accordion__trigger" aria-expanded="false">
-          <span>DRT</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="accordion__body">
-          Run tournaments with Challenge integration, live updates, and in-game control.
-          Price: 30 million gil standalone.
-        </div>
-      </div>
-
-      <div class="accordion" data-accordion>
-        <button class="accordion__trigger" aria-expanded="false">
-          <span>Shout Runner</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="accordion__body">
-          Automate shouts across data centers with smart delays, filters, and verbose logging.
-          Price: 30 million gil standalone.
-        </div>
-      </div>
-
-      <div class="accordion" data-accordion>
-        <button class="accordion__trigger" aria-expanded="false">
-          <span>Venue Plugin Bundle</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="accordion__body">
-          All three plugins (Raffler, DRT, Shout Runner) plus a themed promo page.
-          Price: 65 million gil bundle.
-        </div>
-      </div>
-    </section>
-
-    <section class="panel panel--glass cta" id="contact">
-      <div class="panel__head">
-        <p class="kicker">Ready?</p>
-        <h2>Begin your Crimson Byte build.</h2>
-      </div>
-      <p class="body">
-        Share your style, goals, and timeframe.
-        I'll come back with a customized moodboard and a clear next-step plan.
-        DM me on Discord (Kiera Virelle) via our server.
-      </p>
-      <div class="hero__cta">
-        <a class="button button--primary" href="https://discord.gg/neonneko" target="_blank" rel="noreferrer">Join Discord</a>
-        <a class="button button--ghost" href="#services">See packages again</a>
-      </div>
-    </section>
-  </main>
-
-  <div class="card-modal" id="card-modal">
-    <div class="card-modal__content">
-      <button class="card-modal__close" type="button">Close</button>
-      <div class="card-modal__body"></div>
-    </div>
   </div>
-
-  <div class="footer-logo">
-    <img src="images/CrimsonByteStudioDecal2.png" alt="Crimson Byte Studio logo" />
-  </div>
-
-  <footer class="footer">
-    <span class="crest">Crimson Byte Studio</span>
-    <span class="dot"></span>
-    <span>Built on no sleep and too much caffeine.</span>
-  </footer>
 
   <script src="script.js"></script>
 </body>

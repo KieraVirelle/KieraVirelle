@@ -1,98 +1,142 @@
-const tabButtons = document.querySelectorAll('.tab-button');
-const tabPanels = document.querySelectorAll('.tab-panel');
-const moths = document.querySelectorAll('.moth-icon--fly');
-const cards = document.querySelectorAll('.card');
-const cardModal = document.getElementById('card-modal');
-const cardModalBody = cardModal ? cardModal.querySelector('.card-modal__body') : null;
-const cardModalClose = cardModal ? cardModal.querySelector('.card-modal__close') : null;
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const tabTargets = document.querySelectorAll("[data-tab-target]");
+const tabButtons = document.querySelectorAll(".site-nav [data-tab-target]");
+const panels = document.querySelectorAll("[data-tab-panel]");
+const uploadInput = document.querySelector("#preview-upload");
+const uploadGallery = document.querySelector("#upload-gallery");
+const lightbox = document.querySelector("#media-lightbox");
+const lightboxTitle = document.querySelector("#lightbox-title");
+const lightboxMedia = document.querySelector("#lightbox-media");
+const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
+const portfolioImages = document.querySelectorAll(".project-thumb img");
 
-tabButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const target = button.dataset.tab;
-
-    tabButtons.forEach((btn) => {
-      btn.classList.toggle('is-active', btn === button);
-      btn.setAttribute('aria-selected', btn === button ? 'true' : 'false');
-    });
-
-    tabPanels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel.id === target);
-    });
+function setActiveTab(tabId, updateHash = true) {
+  panels.forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.tabPanel === tabId);
   });
-});
 
-document.querySelectorAll('[data-accordion]').forEach((item) => {
-  const trigger = item.querySelector('.accordion__trigger');
-  const body = item.querySelector('.accordion__body');
-
-  trigger.addEventListener('click', () => {
-    const isOpen = item.classList.contains('is-open');
-    document.querySelectorAll('[data-accordion]').forEach((acc) => {
-      acc.classList.remove('is-open');
-      acc.querySelector('.accordion__trigger').setAttribute('aria-expanded', 'false');
-      acc.querySelector('.accordion__body').style.maxHeight = null;
-    });
-
-    if (!isOpen) {
-      item.classList.add('is-open');
-      trigger.setAttribute('aria-expanded', 'true');
-      body.style.maxHeight = `${body.scrollHeight}px`;
-    }
+  tabButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.tabTarget === tabId);
   });
-});
 
-const randomBetween = (min, max) => Math.random() * (max - min) + min;
+  siteNav?.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
 
-moths.forEach((moth) => {
-  const size = randomBetween(110, 170);
-  const dur = randomBetween(14, 22);
-  const delay = randomBetween(-6, 3);
-  const x0 = `${randomBetween(-50, 50)}px`;
-  const y0 = `${randomBetween(-35, 35)}px`;
-  const x1 = `${randomBetween(-150, 180)}px`;
-  const y1 = `${randomBetween(-120, 120)}px`;
-  const r0 = `${randomBetween(-4, 4)}deg`;
-  const r1 = `${randomBetween(-12, 12)}deg`;
-
-  const posTop = randomBetween(6, 88);
-  const posLeft = randomBetween(6, 90);
-
-  moth.style.setProperty('--size', `${size}px`);
-  moth.style.setProperty('--dur', `${dur}s`);
-  moth.style.setProperty('--x0', x0);
-  moth.style.setProperty('--y0', y0);
-  moth.style.setProperty('--x1', x1);
-  moth.style.setProperty('--y1', y1);
-  moth.style.setProperty('--r0', r0);
-  moth.style.setProperty('--r1', r1);
-  moth.style.top = `${posTop}%`;
-  moth.style.left = `${posLeft}%`;
-  moth.style.animationDelay = `${delay}s`;
-});
-
-const openCardModal = (card) => {
-  if (!cardModal || !cardModalBody) return;
-  cardModalBody.innerHTML = card.innerHTML;
-  cardModal.classList.add('is-active');
-  document.body.classList.add('modal-open');
-};
-
-cards.forEach((card) => {
-  card.addEventListener('click', () => openCardModal(card));
-});
-
-if (cardModalClose) {
-  cardModalClose.addEventListener('click', () => {
-    cardModal.classList.remove('is-active');
-    document.body.classList.remove('modal-open');
-  });
+  if (updateHash) {
+    history.replaceState(null, "", `#${tabId}`);
+  }
 }
 
-if (cardModal) {
-  cardModal.addEventListener('click', (e) => {
-    if (e.target === cardModal) {
-      cardModal.classList.remove('is-active');
-      document.body.classList.remove('modal-open');
-    }
+menuToggle?.addEventListener("click", () => {
+  const isOpen = siteNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+tabTargets.forEach((target) => {
+  target.addEventListener("click", (event) => {
+    event.preventDefault();
+    setActiveTab(target.dataset.tabTarget);
   });
+});
+
+const initialTab = window.location.hash.replace("#", "");
+if (initialTab && document.querySelector(`[data-tab-panel="${initialTab}"]`)) {
+  setActiveTab(initialTab, false);
 }
+
+portfolioImages.forEach((image) => {
+  image.addEventListener("error", () => {
+    image.classList.add("missing");
+    image.closest("[data-media-src]")?.removeAttribute("data-media-src");
+  });
+});
+
+function openLightbox(src, type, title) {
+  if (!lightbox || !lightboxMedia || !lightboxTitle) {
+    return;
+  }
+
+  lightboxMedia.replaceChildren();
+  lightboxTitle.textContent = title || "Preview";
+
+  if (type === "video") {
+    const video = document.createElement("video");
+    video.src = src;
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    lightboxMedia.append(video);
+  } else {
+    const image = document.createElement("img");
+    image.src = src;
+    image.alt = title || "Expanded preview";
+    lightboxMedia.append(image);
+  }
+
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-active");
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxMedia) {
+    return;
+  }
+
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-active");
+  lightboxMedia.replaceChildren();
+}
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-media-src]");
+
+  if (!trigger) {
+    return;
+  }
+
+  event.preventDefault();
+  openLightbox(trigger.dataset.mediaSrc, trigger.dataset.mediaType, trigger.dataset.mediaTitle);
+});
+
+lightboxCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeLightbox);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+});
+
+uploadInput?.addEventListener("change", (event) => {
+  const files = Array.from(event.target.files || []);
+
+  files.forEach((file) => {
+    if (!file.type.startsWith("image/")) {
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+      const card = document.createElement("article");
+      const image = document.createElement("img");
+      const title = document.createElement("h3");
+      const note = document.createElement("p");
+
+      card.className = "preview-card image-card";
+      image.src = reader.result;
+      image.alt = file.name;
+      title.textContent = file.name.replace(/\.[^/.]+$/, "");
+      note.textContent = "Local preview added from your computer.";
+
+      card.append(image, title, note);
+      uploadGallery.prepend(card);
+    });
+
+    reader.readAsDataURL(file);
+  });
+});
